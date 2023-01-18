@@ -9,8 +9,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
-    MemberService memberService = new MemberService(memberRepository);
     MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();
+    MemberService memberService = new MemberService(memoryMemberRepository);
+
 
     @AfterEach
     public void afterEach(){
